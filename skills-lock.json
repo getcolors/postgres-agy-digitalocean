@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "package-postgres-agy-green": {
+      "source": "getcolors/postgres-agy",
+      "sourceType": "github",
+      "skillPath": "skills/package-postgres-agy-green/SKILL.md",
+      "computedHash": "dae9f50df4f98e11a94ab442b0a018deb3e82829f746cdf90439251d10368307"
+    }
+  }
+}
