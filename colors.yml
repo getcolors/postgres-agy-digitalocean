@@ -74,7 +74,7 @@ restore-check-max-age-hours: 26
 
 # --- backups in R2 -----------------------------------------------------------
 
-backup-r2-bucket: postgres-agy-backup
+backup-r2-bucket: langfuse-backup
 backup-r2-endpoint: https://319271fed8bc6d2d9059362be1165f37.eu.r2.cloudflarestorage.com
 backup-r2-region: auto
 backup-r2-prefix: postgres-agy-digitalocean
@@ -85,14 +85,16 @@ digitalocean-name: postgres-agy
 digitalocean-region: ams3
 digitalocean-size: s-2vcpu-4gb
 digitalocean-image: ubuntu-24-04-x64
-digitalocean-ssh-keys: "58495393"
-digitalocean-ssh-private-key: ~/.ssh/id_ed25519
+# No digitalocean-ssh-keys: keygen mode per workspace standards/ssh-keypair.md.
+# The first real create generates ~/.ssh/<profile> and registers it under the
+# profile's name; delete removes it last. Supplying digitalocean-ssh-keys (and
+# digitalocean-ssh-private-key) would switch this deployment to opt-out mode.
 
 digitalocean-ssh-sources:
-  - 129.159.242.163/32
+  - 89.168.97.254/32
 
 digitalocean-client-sources:
-  - 129.159.242.163/32
+  - 89.168.97.254/32
 
 digitalocean-vpc-mode: default
 
