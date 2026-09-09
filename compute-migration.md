@@ -1,6 +1,6 @@
 # Shared compute rollout
 
-Installed package: `getcolors/postgres-agy` at published revision `519ac746285d7bb71975062c25677ce6e5a609a1`.
+Installed package: `getcolors/postgres-agy` at published revision `2b4ec146e8a33ce006da0395fbabfb326920a9de`.
 The installed skill directories and root launchers were copied from a verified
 Skills CLI installation of that revision. The existing skills-lock.json entries were updated from that installation.
 
@@ -24,3 +24,8 @@ Generated compute documents were present. Any rendered backend documents used
 compute state keys and contained no credentials.
 This proves offline rendering, not live credentials, migrated ownership, or
 application health.
+
+Repeated deletion after validated compute retirement resumes only local cleanup,
+without SSH keys or remote application stages. Failed ownership inspection
+still blocks deletion. The refreshed published launcher passed an additional
+offline build of this unchanged configuration in a temporary directory.
